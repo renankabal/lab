@@ -14,7 +14,7 @@
 Route::get('pdf/image', function()
 {
     $html = View::make('pdf.image');
-    return PDF::load($html, 'A4', 'portrait')->download();
+    return PDF::load($html, 'A4', 'portrait')->show();
 });
 
 Route::get('pdf/utf8', function()
@@ -26,7 +26,7 @@ Route::get('pdf/utf8', function()
 Route::get('pdf/css', function()
 {
     $html = View::make('pdf.css');
-    return PDF::load($html, 'A4', 'portrait')->download();
+    return PDF::load($html, 'A4', 'portrait')->show();
 });
 
 Route::get('pdf/multi', function()
